@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int i,j,n,m,t;
+	cin>>n;
+	int a[n];
+	for(i=0;i<n;i++){
+	    cin>>a[i];
+	}
+	m=a[0];
+	for(i=1;i<n;i++){
+	    if(m<=a[i]){
+	        t=a[i];
+	        a[i]=m;
+	        m=t;
+	    }
+	}
+	cout<<"The maximum for this array is : "<<m<<endl;
+	m=a[0];
+	
+	for(i=1;i<n;i++){
+	    if(m>=a[i]){
+	        t=a[i];
+	        a[i]=m;
+	        m=t;
+	    }
+	}
+	cout<<"The minimum for this array is : "<<m;
+	return 0;
+}
